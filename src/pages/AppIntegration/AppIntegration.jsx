@@ -86,10 +86,12 @@ function AppIntegration() {
           <button className="appinteg__button appinteg__button-blue">
             Browse more apps
           </button>
-          <Link to="/online-store/partners">
-            <button className="appinteg__button appinteg__button-green">
-              Next
-            </button>
+
+          <Link
+            className="appinteg__button appinteg__button-green"
+            to={"/online-store/partners"}
+          >
+            Next
           </Link>
         </div>
       </ShadowBox>
