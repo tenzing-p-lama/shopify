@@ -25,7 +25,7 @@ function Header() {
           type="text"
           name="searchbar"
           id="searchbar"
-          placeholder="Search here"
+          placeholder="Search"
         />
       </div>
 
@@ -36,9 +36,9 @@ function Header() {
           <div className="header-avatar__grey">MS</div>
         </section>
 
-        <section className="header-information">
-          <p className="header-company">Merry Cosmetics</p>
-          <p className="header-user">Katie S</p>
+        <section className="header-info">
+          <p className="header-info__company">Merry Cosmetics</p>
+          <p className="header-info__user">Katie S</p>
         </section>
       </div>
     </header>
