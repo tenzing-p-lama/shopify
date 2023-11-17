@@ -1,6 +1,6 @@
 import "./Builder.scss";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import inperson from "../../assets/icons/image 3.png";
 import online from "../../assets/icons/image 4.png";
 import ShadowBox from "../../components/ShadowBox/ShadowBox";
@@ -90,7 +90,11 @@ function Builder() {
           </div>
 
           <div className="shopdetails__button-container">
-            <button className="shopdetails__button">Generate a Website</button>
+            <Link to="/online-store/design">
+              <button className="shopdetails__button">
+                Generate a Website
+              </button>
+            </Link>
           </div>
         </form>
       </ShadowBox>
