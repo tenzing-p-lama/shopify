@@ -6,6 +6,7 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import Builder from "./pages/Builder/Builder";
 import OnlineStore from "./pages/OnlineStore/OnlineStore";
+import AppIntegration from "./pages/AppIntegration/AppIntegration";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/online-store" element={<Builder />} />
               <Route path="/online-store/design" element={<OnlineStore />} />
+              <Route
+                path="/online-store/appintegration"
+                element={<AppIntegration />}
+              />
             </Routes>
           </div>
         </main>

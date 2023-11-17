@@ -1,0 +1,57 @@
+.appinteg {
+  margin: 0 10%;
+  padding-top: 2rem;
+  height: 100%;
+
+  &__content {
+    color: #303030;
+    padding: 2rem;
+    &-top {
+      border-bottom: 1px solid #e1e3e5;
+    }
+    &-card-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 5rem 1rem;
+      margin: 1rem;
+    }
+  }
+
+  &__content-header {
+    color: #303030;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    &--big {
+      color: #00996e;
+      font-weight: 500;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__content-description {
+    font-size: 1.25rem;
+  }
+
+  &__button {
+    height: 50px;
+    width: 170px;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-left: 5rem;
+    border-radius: 5px;
+    border: none;
+    &-green {
+      background-color: #008060;
+    }
+    &-blue {
+      background-color: #1773b0;
+    }
+    &-container {
+      padding: 0 2rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
