@@ -3,11 +3,13 @@ import SideBar from "./components/SideBar/SideBar";
 import Home from "./pages/Home/Home";
 import "./App.scss";
 
+import Header from "./components/Header/Header";
+
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <div>Header</div>
+        <Header />
         <main>
           <SideBar />
           <div className="app__content">
