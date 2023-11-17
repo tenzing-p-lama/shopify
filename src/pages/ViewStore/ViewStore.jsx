@@ -1,13 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ViewStore.scss";
 import mobileIcon from "../../assets/Mobile.png";
 import desktopIcon from "../../assets/Desktop.png";
 import searchIcon from "../../assets/Search.png";
 import userIcon from "../../assets/Customer2.png";
 import purchaseIcon from "../../assets/Purchase.png";
-import PhotoUploader from "../../components/PhotoUploader/PhotoUploader";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function ViewStore(props) {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    void fetchData();
+  }, []);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000");
+      setData(response.data);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const sendData = async () => {
+    try {
+      await axios.post("http://localhost:8000", {
+        mainText: props.mainText,
+        subText: props.subText,
+        fProduct: props.fProduct,
+        sProduct: props.sProduct,
+        tProduct: props.tProduct,
+        fProductPrice: props.fProductPrice,
+        sProductPrice: props.sProductPrice,
+        tProductPrice: props.tProductPrice,
+      });
+      await fetchData();
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   return (
     <div className={props.open ? "view--open" : "view"}>
       <div className="view__header">
@@ -35,7 +73,15 @@ function ViewStore(props) {
             </button>
           </div>
         </div>
-        <button className="view__save-button">Save</button>
+        <Link
+          className="view__save-button"
+          onClick={() => {
+            void sendData();
+          }}
+          to={"/online-store/partners"}
+        >
+          Save
+        </Link>
       </div>
 
       <div className="view__content">

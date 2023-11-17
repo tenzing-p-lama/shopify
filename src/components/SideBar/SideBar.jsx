@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SideBar.scss";
 import { Link, useLocation } from "react-router-dom";
 import homeIcon from "../../assets/Home.png";
@@ -25,6 +25,10 @@ function SideBar() {
   const pathKey = path.split("/")[1];
 
   const [selected, setSelected] = useState(pathKey ? pathKey : "home");
+
+  useEffect(() => {
+    setSelected(pathKey ? pathKey : "home");
+  }, [pathKey]);
 
   const getListItemClass = (itemName) => {
     return selected === itemName
