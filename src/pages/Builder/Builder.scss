@@ -1,0 +1,9 @@
+.shopdetails {
+  padding: 2rem;
+  width: 50%;
+  border: 1px solid red;
+  &-form {
+    display: flex;
+    flex-direction: column;
+  }
+}
