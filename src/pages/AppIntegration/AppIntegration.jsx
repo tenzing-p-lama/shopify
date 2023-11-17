@@ -1,6 +1,7 @@
 import "./AppIntegration.scss";
 import ShadowBox from "../../components/ShadowBox/ShadowBox";
 import CardApp from "../../components/CardApp/CardApp";
+import { Link } from "react-router-dom";
 
 //icons
 import tiktok from "../../assets/icons/image 6.png";
@@ -11,7 +12,6 @@ import printify from "../../assets/icons/image 10.png";
 import matrixify from "../../assets/icons/image 11.png";
 import cjdrop from "../../assets/icons/image 12.png";
 import autosync from "../../assets/icons/image 13.png";
-import { Link } from "react-router-dom";
 
 function AppIntegration() {
   return (

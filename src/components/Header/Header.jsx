@@ -33,7 +33,7 @@ function Header() {
         <img src={notification} alt="notification icon" />
 
         <section className="header-avatar">
-          <div className="header-avatar__grey">MS</div>
+          <div className="header-avatar__grey">MC</div>
         </section>
 
         <section className="header-info">
