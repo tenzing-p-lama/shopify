@@ -1,0 +1,16 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    background-color: #ebebeb;
+    width: 14%;
+    min-width: 20rem;
+    max-width: 40rem;
+
+    &__list-link {
+        img {
+            width: 2rem;
+        }
+    }
+}
