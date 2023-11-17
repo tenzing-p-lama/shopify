@@ -1,9 +1,10 @@
 import "./App.css";
+import Button from "./Components/Buttons/Button";
 
 function App() {
   return (
     <div className="App">
-      <p>hello shopify</p>
+      <Button />
     </div>
   );
 }
