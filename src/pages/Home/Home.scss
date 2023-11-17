@@ -1,0 +1,49 @@
+.home {
+    margin: 0 15%;
+    padding-top: 5rem;
+    height: 100%;
+
+    &__content {
+        color: #303030;
+        border-bottom: 1px solid #e1e3e5;
+        padding: 2rem;
+        &-card-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            margin: 1rem;
+        }
+    }
+
+    &__content-header {
+        color: #303030;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        &--big {
+            color: #00996e;
+            font-weight: 500;
+        }
+    }
+
+    &__content-button-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 1.5rem;
+        gap: 1rem;
+    }
+
+    &__content-button {
+        flex: 1 1;
+        color: white;
+        outline: none;
+        border: none;
+        background-color: #00996e;
+        border-radius: 4px;
+        padding: 0.5rem 0;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.25rem;
+        text-decoration: none;
+    }
+}

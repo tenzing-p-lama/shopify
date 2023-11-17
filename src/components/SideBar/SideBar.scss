@@ -1,0 +1,83 @@
+@mixin list-link {
+    gap: 0.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+@mixin list-item {
+    list-style-type: none;
+    margin-right: 2rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    background-color: #ebebeb;
+    width: 14%;
+    min-width: 20rem;
+    max-width: 40rem;
+    padding-left: 1.5rem;
+
+    &__list-link {
+        img {
+            width: 2rem;
+        }
+    }
+
+    &__list-item {
+        @include list-item;
+
+        &--selected {
+            @include list-item;
+            background-color: white;
+            border-radius: 7px;
+            .sidebar__list-link {
+                color: #008060;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__list-container {
+        padding-top: 5rem;
+    }
+
+    &__list {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0.75rem 0;
+    }
+
+    &__list-link {
+        color: #4a4a4a;
+        @include list-link;
+    }
+
+    &__list-label-link {
+        color: #616161;
+        @include list-link;
+        justify-content: space-between;
+        padding-right: 2rem;
+        padding-left: 0.5rem;
+
+        .fa-chevron-right {
+            color: #616161;
+            font-size: 1rem;
+        }
+    }
+
+    &__list-section {
+        margin-top: 3rem;
+    }
+
+    &__list-label--setting {
+        padding-bottom: 1.5rem;
+    }
+}
