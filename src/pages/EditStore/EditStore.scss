@@ -134,8 +134,6 @@
             align-items: center;
 
             .uploader {
-                // width: 4rem;
-                // height: 4rem;
                 overflow: hidden;
                 img {
                     object-fit: cover;
@@ -167,7 +165,8 @@
             border: 1px dotted;
             margin-top: 1rem;
             input {
-                max-width: 25rem;
+                font-size: 2rem;
+                max-width: 18rem;
                 border: none;
                 outline: none;
                 background-color: transparent;
@@ -175,9 +174,9 @@
             &-price {
                 display: flex;
                 align-items: center;
-                font-size: 1.25rem;
+                font-size: 2rem;
                 input {
-                    max-width: 6rem;
+                    max-width: 10rem;
                     border: none;
                     outline: none;
                     background-color: transparent;

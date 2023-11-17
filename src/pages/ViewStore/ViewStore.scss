@@ -131,13 +131,14 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             margin-top: 1rem;
+            font-size: 2rem;
 
             &-price {
                 display: flex;
                 align-items: center;
-                font-size: 1.25rem;
+                font-size: 2rem;
+                color: #7f7f7f;
             }
         }
 
@@ -147,6 +148,7 @@
             width: 100%;
             max-height: 12rem;
             font-size: 3rem;
+            color: #6a6a6a;
         }
 
         &-input-text--main {
