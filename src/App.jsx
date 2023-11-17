@@ -7,6 +7,8 @@ import Header from "./components/Header/Header";
 import Builder from "./pages/Builder/Builder";
 import OnlineStore from "./pages/OnlineStore/OnlineStore";
 import AppIntegration from "./pages/AppIntegration/AppIntegration";
+import EditStore from "./pages/EditStore/EditStore";
+import Partners from "./pages/Partners/Partners";
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
                 path="/online-store/appintegration"
                 element={<AppIntegration />}
               />
+              <Route path="/online-store/partners" element={<Partners />} />
             </Routes>
           </div>
         </main>

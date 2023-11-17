@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import ShadowBox from "../../components/ShadowBox/ShadowBox";
 import "./Home.scss";
@@ -40,7 +41,9 @@ function Home() {
         <div className="home__content">
           <h1 className="home__content-header">Build a New Store</h1>
           <div className="home__content-button-container">
-            <button className="home__content-button">AI Generate Theme</button>
+            <Link className="home__content-button" to={"/online-store"}>
+              AI Generate Theme
+            </Link>
             <button className="home__content-button">Customize Theme</button>
           </div>
         </div>
