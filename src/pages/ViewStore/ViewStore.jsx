@@ -78,7 +78,7 @@ function ViewStore(props) {
           onClick={() => {
             void sendData();
           }}
-          to={"/online-store/partners"}
+          to={"/online-store/appintegration"}
         >
           Save
         </Link>

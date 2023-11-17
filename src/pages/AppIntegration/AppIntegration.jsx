@@ -1,6 +1,7 @@
 import "./AppIntegration.scss";
 import ShadowBox from "../../components/ShadowBox/ShadowBox";
 import CardApp from "../../components/CardApp/CardApp";
+import { Link } from "react-router-dom";
 
 //icons
 import tiktok from "../../assets/icons/image 6.png";
@@ -85,9 +86,11 @@ function AppIntegration() {
           <button className="appinteg__button appinteg__button-blue">
             Browse more apps
           </button>
-          <button className="appinteg__button appinteg__button-green">
-            Next
-          </button>
+          <Link to="/online-store/partners">
+            <button className="appinteg__button appinteg__button-green">
+              Next
+            </button>
+          </Link>
         </div>
       </ShadowBox>
     </div>
