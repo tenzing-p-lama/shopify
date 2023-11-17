@@ -1,0 +1,81 @@
+.shopdetails {
+  margin: 0 32% 0 10%;
+  padding-top: 2rem;
+  height: 100%;
+  &__content {
+    padding: 1rem;
+  }
+  &__header {
+    color: #303030;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 20px;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    &__sell {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 430px;
+    }
+    &__platform {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      border: 1px solid #dedede;
+      border-radius: 5px;
+      width: 200px;
+      height: 170px;
+      color: #303030;
+    }
+    &__content {
+      padding-bottom: 5px;
+      &-img {
+        width: 60px;
+        padding-bottom: 5px;
+      }
+    }
+  }
+  &__button-container {
+    display: flex;
+    justify-content: end;
+  }
+  &__button {
+    color: white;
+    outline: none;
+    border: none;
+    background-color: #00996e;
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    width: 320px;
+    height: 50px;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+
+.form {
+  &__input {
+    width: 430px;
+    height: 50px;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+  }
+  &__textarea {
+    width: 430px;
+    padding: 1rem 1rem 0;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    font-family: inherit;
+  }
+}
