@@ -6,6 +6,7 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import Builder from "./pages/Builder/Builder";
 import OnlineStore from "./pages/OnlineStore/OnlineStore";
+import EditStore from "./pages/EditStore/EditStore";
 
 function App() {
   return (
