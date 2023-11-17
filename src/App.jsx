@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import "./App.scss";
 
 import Header from "./components/Header/Header";
+import OnlineStore from "./pages/OnlineStore/OnlineStore";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <div className="app__content">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/online-store/design" element={<OnlineStore />} />
             </Routes>
           </div>
         </main>

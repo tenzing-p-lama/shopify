@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SideBar.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import homeIcon from "../../assets/Home.png";
 import orderIcon from "../../assets/Orders.png";
 import productsIcon from "../../assets/Products.png";
@@ -19,7 +19,13 @@ import searchDiscoveryIcon from "../../assets/SearchDiscovery.png";
 import flowIcon from "../../assets/Flow.png";
 
 function SideBar() {
-  const [selected, setSelected] = useState("home");
+  const location = useLocation();
+
+  const path = location.pathname ? location.pathname : "/";
+  const pathKey = path.split("/")[1];
+
+  const [selected, setSelected] = useState(pathKey ? pathKey : "home");
+
   const getListItemClass = (itemName) => {
     return selected === itemName
       ? "sidebar__list-item--selected"
@@ -135,11 +141,11 @@ function SideBar() {
           </div>
 
           <ul className="sidebar__list">
-            <li className={getListItemClass("os")}>
+            <li className={getListItemClass("online-store")}>
               <Link
-                to="/"
+                to="/online-store"
                 className="sidebar__list-link"
-                onClick={() => setSelected("os")}
+                onClick={() => setSelected("online-store")}
               >
                 <img src={onlineStoreIcon} alt="Online store logo" />
                 Online Store
