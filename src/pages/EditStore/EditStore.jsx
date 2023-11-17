@@ -7,6 +7,7 @@ import userIcon from "../../assets/Customer2.png";
 import purchaseIcon from "../../assets/Purchase.png";
 import PhotoUploader from "../../components/PhotoUploader/PhotoUploader";
 import ViewStore from "../ViewStore/ViewStore";
+import axios from "axios";
 
 function EditStore(props) {
   const [showStyleMenu, setShowStyleMenu] = useState({
@@ -22,10 +23,6 @@ function EditStore(props) {
 
   const [mainText, setMainText] = useState("");
   const [subText, setSubText] = useState("");
-  const [mainImage, setMainImage] = useState("");
-  const [fImage, setFImage] = useState("");
-  const [sImage, setSImage] = useState("");
-  const [tImage, setTImage] = useState("");
   const [fProduct, setFProduct] = useState("");
   const [sProduct, setSProduct] = useState("");
   const [tProduct, setTProduct] = useState("");
@@ -34,6 +31,11 @@ function EditStore(props) {
   const [tProductPrice, setTProductPrice] = useState();
 
   const [openViewStore, setOpenViewStore] = useState(false);
+
+  const [mainPhoto, setMainPhoto] = useState();
+  const [firstPhoto, setFirstPhoto] = useState();
+  const [secondPhoto, setSecondPhoto] = useState();
+  const [thirdPhoto, setThirdPhoto] = useState();
 
   useEffect(() => {
     setShowStyleMenu({
@@ -58,6 +60,10 @@ function EditStore(props) {
         onClose={() => {
           setOpenViewStore(false);
         }}
+        mainPhoto={mainPhoto}
+        firstPhoto={firstPhoto}
+        secondPhoto={secondPhoto}
+        thirdPhoto={thirdPhoto}
       />
       <div
         className={props.open ? "edit--open" : "edit"}
@@ -294,11 +300,21 @@ function EditStore(props) {
                   />
                 </div>
               </div>
-              <PhotoUploader onDrop={(file) => {}} />
+              <PhotoUploader
+                src={mainPhoto}
+                onDrop={(file) => {
+                  setMainPhoto(URL.createObjectURL(file[0]));
+                }}
+              />
             </div>
             <div className="edit__content-input--scondary">
               <div className="edit__content-input-image">
-                <PhotoUploader onDrop={(file) => {}} />
+                <PhotoUploader
+                  src={firstPhoto}
+                  onDrop={(file) => {
+                    setFirstPhoto(URL.createObjectURL(file[0]));
+                  }}
+                />
                 <div className="edit__content-product">
                   <input
                     type="text"
@@ -319,7 +335,12 @@ function EditStore(props) {
               </div>
 
               <div className="edit__content-input-image">
-                <PhotoUploader onDrop={(file) => {}} />
+                <PhotoUploader
+                  src={secondPhoto}
+                  onDrop={(file) => {
+                    setSecondPhoto(URL.createObjectURL(file[0]));
+                  }}
+                />
                 <div className="edit__content-product">
                   <input
                     type="text"
@@ -340,7 +361,12 @@ function EditStore(props) {
               </div>
 
               <div className="edit__content-input-image">
-                <PhotoUploader onDrop={(file) => {}} />
+                <PhotoUploader
+                  src={thirdPhoto}
+                  onDrop={(file) => {
+                    setThirdPhoto(URL.createObjectURL(file[0]));
+                  }}
+                />
                 <div className="edit__content-product">
                   <input
                     type="text"

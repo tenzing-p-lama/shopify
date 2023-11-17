@@ -11,7 +11,7 @@ import "./OnlineStore.scss";
 import EditStore from "../EditStore/EditStore";
 
 function OnlineStore() {
-  const [openEdit, setOpenEdit] = useState(true);
+  const [openEdit, setOpenEdit] = useState(false);
 
   return (
     <>

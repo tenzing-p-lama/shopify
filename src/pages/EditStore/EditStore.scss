@@ -115,17 +115,47 @@
             justify-content: space-between;
             gap: 10rem;
             margin: 5rem 0px;
+
+            .uploader {
+                width: 4rem;
+                height: 4rem;
+                overflow: hidden;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
 
         &-input--scondary {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            .uploader {
+                // width: 4rem;
+                // height: 4rem;
+                overflow: hidden;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
 
         &-input-image {
             .uploader {
                 border-radius: 10px;
+                width: 30rem;
+                height: 30rem;
+                overflow: hidden;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
 

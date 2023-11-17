@@ -11,7 +11,7 @@ function PhotoUploader(props) {
   return (
     <div {...getRootProps()} className="uploader">
       <input {...getInputProps()} />
-      {isDragActive ? <p>Drop the files here ...</p> : <p></p>}
+      <img src={props.src} />
     </div>
   );
 }

@@ -69,13 +69,13 @@ function ViewStore(props) {
             </div>
 
             <div className="view__content-img">
-              <img src="/" />
+              <img src={props.mainPhoto} />
             </div>
           </div>
           <div className="view__content-input--scondary">
             <div className="view__content-input-image">
               <div className="view__content-product-img">
-                <img src="/" />
+                <img src={props.firstPhoto} />
               </div>
               <div className="view__content-product">
                 <div className="view__content-product-name">
@@ -90,7 +90,7 @@ function ViewStore(props) {
 
             <div className="view__content-input-image">
               <div className="view__content-product-img">
-                <img src="/" />
+                <img src={props.secondPhoto} />
               </div>
               <div className="view__content-product">
                 <div className="view__content-product-name">
@@ -104,7 +104,7 @@ function ViewStore(props) {
 
             <div className="view__content-input-image">
               <div className="view__content-product-img">
-                <img src="/" />
+                <img src={props.thirdPhoto} />
               </div>
               <div className="view__content-product">
                 <div className="view__content-product-name">
